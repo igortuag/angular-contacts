@@ -1,17 +1,16 @@
-import { MaterializeModule } from "angular2-materialize";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 
 import { AppComponent } from "./app.component";
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { CoursesComponent } from './courses/courses.component';
+import { LoginComponent } from "./login/login.component";
+import { HomeComponent } from "./home/home.component";
+import { CoursesComponent } from "./courses/courses.component";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, HomeComponent, CoursesComponent],
-  imports: [BrowserModule, FormsModule, HttpModule, MaterializeModule],
+  imports: [BrowserModule, FormsModule, HttpModule],
   providers: [],
   bootstrap: [AppComponent],
 })
