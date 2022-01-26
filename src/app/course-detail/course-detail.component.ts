@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { CoursesService } from "app/courses/courses.service";
 import { Subscription } from "rxjs";
 
 @Component({
@@ -8,14 +9,19 @@ import { Subscription } from "rxjs";
   styleUrls: ["./course-detail.component.css"],
 })
 export class CourseDetailComponent implements OnInit {
-  id: string;
+  id: number;
   inscription: Subscription;
+  course: any;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private coursesService: CoursesService
+  ) {}
 
   ngOnInit() {
     this.inscription = this.route.params.subscribe((params: any) => {
-      this.id = params["id"];
+      this.id = +params["id"];
+      this.course = this.coursesService.getCourse(this.id);
     });
   }
 

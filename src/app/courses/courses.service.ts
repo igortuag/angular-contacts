@@ -19,5 +19,11 @@ export class CoursesService {
     ];
   }
 
+  getCourse(id: number) {
+    const courses = this.getCourses();
+
+    return courses.find((course) => course.id === id);
+  }
+
   constructor() {}
 }
