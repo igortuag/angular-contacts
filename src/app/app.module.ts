@@ -10,6 +10,8 @@ import { CoursesComponent } from "./courses/courses.component";
 import { routing } from "./app.routing";
 import { CourseDetailComponent } from "./course-detail/course-detail.component";
 import { CoursesService } from "./courses/courses.service";
+import { CouseNotFoundComponent } from './couse-not-found/couse-not-found.component';
+import { CourseNotFoundComponent } from './course-not-found/course-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { CoursesService } from "./courses/courses.service";
     HomeComponent,
     CoursesComponent,
     CourseDetailComponent,
+    CouseNotFoundComponent,
+    CourseNotFoundComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpModule, routing],
   providers: [CoursesService],
