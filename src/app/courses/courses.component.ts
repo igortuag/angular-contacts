@@ -7,7 +7,11 @@ import { CoursesService } from "./courses.service";
   styleUrls: ["./courses.component.css"],
 })
 export class CoursesComponent implements OnInit {
+  courses: any[];
+
   constructor(private coursesService: CoursesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.courses = this.coursesService.getCourses();
+  }
 }
